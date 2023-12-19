@@ -220,6 +220,7 @@ traitlets==5.9.0
 transformers @ git+https://github.com/huggingface/transformers.git@3d1a7bf4761e332e78e07d147bacb0d26a522187
 trubrics==1.6.2
 typer==0.9.0
+tiktoken==0.5.1
 typing-inspect==0.9.0
 typing_extensions==4.5.0
 tzdata==2023.3

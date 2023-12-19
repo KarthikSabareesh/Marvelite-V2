@@ -10,9 +10,11 @@ These were achieved using LangChain's various mechanisms. They are as follows:
 ### Built in context, basic memory and system prompt : MongoDB Atlas and PyMongo
 ### Front end Chat Interface : Streamlit Chat Messages
 ### Chatbot : OpenAI (HuggingFace Hub models also encouraged for open source alternatives)
-### Feedback collection, and analysis : Trubrics
+### Feedback collection, and analysis of user activity and the chat data : Trubrics
 ### Feedback learning : MongoDB Atlas (we import memory from it and hence we add question answer pairs with positive feedback to our DB as extra few-shot prompting examples)
 
 I'd like to keep it short and hence, in conclusion, I'd like to thank you all for viewing this repository and I hope you all have a wonderful day!!!
+
+### Note : It is highly reccomended to only ask Marvelite questions that are appropriate and related to Marvel Entertainment
 
 

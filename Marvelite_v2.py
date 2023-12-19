@@ -104,9 +104,12 @@ async def getAnswer(initial_messages,inputVal):
         
 def getAnswerV2(initial_messages,inputVal):
         try:  
-            os.environ["SERPAPI_API_KEY"] = "68a5c3217c4a355f3100da0fc8e384f7d60bcc32b681cd87569d4bcabcaf1331"
-
-            os.environ["OPENAI_API_KEY"] = "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"
+            openai_api_key = st.secrets["OPENAI_API_KEY"]
+            serpapi_api_key = st.secrets["SERPAPI_API_KEY"]
+        
+            # Set environment variables
+            os.environ["OPENAI_API_KEY"] = openai_api_key
+            os.environ["SERPAPI_API_KEY"] = serpapi_api_key
 
             # %%
             search = SerpAPIWrapper()

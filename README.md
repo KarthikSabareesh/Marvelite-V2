@@ -6,7 +6,7 @@
 In this project, I hoped to create a chatbot with a simnmnple, sleek frontned mechanism, a strong backend with domain knowledge and ability to answer a variety of questions, ability to take feedback and learn from it, as well as general memory and context awareness.
 These were achieved using LangChain's various mechanisms. They are as follows:
 
-### Context remembrance and Conversation Memory: ConversationalSummaryBufferMemory from Langchain
+### Chatbot backend, Context remembrance and Conversation Memory: Langchain
 ### Built in context, basic memory and system prompt : MongoDB Atlas and PyMongo
 ### Front end Chat Interface : Streamlit Chat Messages
 ### Chatbot : OpenAI (HuggingFace Hub models also encouraged for open source alternatives)

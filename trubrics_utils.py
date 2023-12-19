@@ -14,9 +14,9 @@ def trubrics_config(default_component: bool = True):
     #     label_visibility="collapsed",
     #     type="password"
     # )
-
-    email="karthiksabareesh1503@gmail.com"
-    password="KarthikSab-45"
+    
+    email = st.secrets["EMAIL"]
+    password = st.secrets["PASSWORD"]
 
     if default_component:
         return email, password

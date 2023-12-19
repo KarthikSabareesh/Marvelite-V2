@@ -8,7 +8,7 @@ import os
 from langchain.llms import HuggingFaceHub
 import pymongo
 os.environ["OPENAI_API_KEY"] = "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"
-os.environ["MONGODB_ATLAS_URL"] = "mongodb+srv://karthiksabareesh1503:KarthikSab-45@kscluster.yxaghri.mongodb.net/"
+os.environ["MONGODB_ATLAS_URL"] = "mongodb+srv://karthiksabareesh1503:KarthikSab-45@kscluster.yxaghri.mongodb.net/?retryWrites=true&w=majority"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 # Retrieve the MongoDB Atlas URL from the environment variable
 mongodb_atlas_url = os.environ.get("MONGODB_ATLAS_URL")

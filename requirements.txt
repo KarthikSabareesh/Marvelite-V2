@@ -25,5 +25,4 @@ streamlit==1.29.0
 streamlit-feedback==0.1.2
 textsearch==0.0.24
 trubrics==1.6.2
-urllib3==2.0.7
 virtualenv==20.24.5

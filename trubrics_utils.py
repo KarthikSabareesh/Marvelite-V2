@@ -2,19 +2,6 @@ import streamlit as st
 
 
 def trubrics_config(default_component: bool = True):
-    st.subheader("Welcome to Marvelite")
-    st.subheader("The raw feedback you send will be shown below")
-    # email = st.text_input(
-    #     label="email", placeholder="email", label_visibility="collapsed"
-    # )
-
-    # password = st.text_input(
-    #     label="password",
-    #     placeholder="password",
-    #     label_visibility="collapsed",
-    #     type="password"
-    # )
-    
     email = st.secrets["EMAIL"]
     password = st.secrets["PASSWORD"]
 

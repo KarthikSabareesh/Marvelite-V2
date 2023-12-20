@@ -108,16 +108,16 @@ if prompt := st.chat_input("Ask your question"):
         message_placeholder = st.empty()
         with st.spinner("Loading your answer..."):
             #Checking relation to domain
-            llm = OpenAI(temperature=0.63) #(You can use another OpenAI LLM like shown in this line or use a model from HF Hub like shown below)
-            # repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1"
-            # llm = HuggingFaceHub(
-            #     repo_id=repo_id, model_kwargs={"temperature": 0.63}
-            # )
-            llm_prompt = f'''Could the question {prompt} be related to Marvel Comics or Marvel Cinematic Universe and not inappropriate? Give a "Yes" or "No" answer'''
+            # llm = OpenAI(temperature=0.63) #(You can use another OpenAI LLM like shown in this line or use a model from HF Hub like shown below)
+            repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1"
+            llm = HuggingFaceHub(
+                repo_id=repo_id, model_kwargs={"temperature": 0.63}
+            )
+            llm_prompt = f'''Could the question {prompt} be related to Marvel Comics or Marvel Cinematic Universe? Give a "Yes" or "No" answer'''
             print(llm_prompt)
             llm_response=llm.invoke(llm_prompt)
             print(llm_response)
-            if '\n\nYes' in llm_response:
+            if 'Yes' in llm_response:
                 #Finding answer if domain-related
                 full_response = getAnswerV2(initial_messages=st.session_state.initial_messages,inputVal=prompt)
             else:

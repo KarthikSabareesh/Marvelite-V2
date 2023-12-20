@@ -27,10 +27,7 @@ mycol = mydb["Messages"]
 st.title("Marvelite")
 st.subheader("Your Friendly Neighbourhood Chatbot")
 
-
-with st.sidebar:
-    email, password = trubrics_config()
-    st.divider()
+email, password = trubrics_config()
 
 if not email or not password:
     st.info(
@@ -88,14 +85,10 @@ for n, msg in enumerate(messages):
             user_id=email,
         )
         if feedback:
-            with st.sidebar:
-                st.write(":orange[Here's the raw feedback you sent to [Trubrics](https://trubrics.streamlit.app/):]")
-                st.write(feedback)
-                if feedback["user_response"]["score"] == "👍":
-                    mylist.append(messages[n-1])
-                    mylist.append({"role": "assistant", "content": msg["content"]})
-                    x = mycol.insert_many(mylist)
-                    st.write("Successfully inserted with : ",x.inserted_ids)
+            if feedback["user_response"]["score"] == "👍":
+                mylist.append(messages[n-1])
+                mylist.append({"role": "assistant", "content": msg["content"]})
+                x = mycol.insert_many(mylist)
     mylist.clear()
 
 # Chat section of the project
